@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shopping Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>AI Shopping Assistant</h1>
+            <p>Describe what you need and I will find the best products for you.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="query-input" placeholder="What are you looking for?" autocomplete="off">
+                <button id="find-btn" class="btn btn-primary">Find Products</button>
+            </div>
+
+            <div id="loading" class="loading-message hidden">
+                Searching for the best products...
+            </div>
+
+            <div id="results" class="results"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>AI-Powered Agentic Shopping Assistant &mdash; Built with Python &amp; Flask</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

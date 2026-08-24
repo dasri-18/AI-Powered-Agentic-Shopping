@@ -1,0 +1,225 @@
+/* ===============================================================
+   style.css — AI Shopping Assistant
+   Clean, modern, and responsive.
+   =============================================================== */
+
+/* ── Reset & base ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #1a1a2e;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ── Header ── */
+.header {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ── Search Section ── */
+.search-section {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.search-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#query-input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 24px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#query-input:focus {
+    border-color: #2563eb;
+}
+
+/* ── Buttons ── */
+.btn {
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+/* ── Loading message ── */
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ── Results ── */
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Summary message */
+.summary {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem 1.6rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+}
+
+/* Product card grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 0.3rem;
+}
+
+.product-card .brand {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.6rem;
+}
+
+.product-card .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin: 0.4rem 0;
+}
+
+.product-card .rating {
+    font-size: 0.9rem;
+    color: #f59e0b;
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+
+.product-card .score {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin: 0.3rem 0;
+}
+
+.product-card .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0.6rem 0;
+}
+
+.feature-tag {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+}
+
+.product-card .explanation {
+    font-size: 0.85rem;
+    color: #475569;
+    margin-top: 0.6rem;
+    line-height: 1.5;
+}
+
+/* ── Footer ── */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .header {
+        padding: 1.8rem 1rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
